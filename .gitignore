@@ -1,0 +1,6 @@
+/node_modules/
+/tests/
+/vendor/
+/.env
+/.idea/codeception.xml
+/.idea/phpspec.xml
