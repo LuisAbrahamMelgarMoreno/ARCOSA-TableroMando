@@ -661,7 +661,7 @@ onMounted( () => {
           placeholder="············"
           hint="Minimo 8 caracteres"
           :rules="[passwordValidacion]"
-          label="Contraseña"
+          label="Contraseña Usuario"
           required
           @click:append-inner="show1 = !show1"
         />

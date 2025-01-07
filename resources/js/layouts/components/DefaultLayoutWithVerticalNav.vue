@@ -73,7 +73,7 @@ provide('DialogMessage', functions);
         </IconBtn>
         <VSpacer />
         <div class="d-flex justify-center">
-          <span>{{'WMS '+plantaSeleccionada.nombre }}</span>
+          <span>{{plantaSeleccionada.nombre }}</span>
         </div>
         <ChangePlanta v-if="plantas.length >1" :plantas="plantas" :plantaSeleccionada="plantaSeleccionada" />
         <NavbarThemeSwitcher />

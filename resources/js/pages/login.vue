@@ -110,7 +110,7 @@ const onSubmit = () => {
       >
         <VCardText>
           <h4 class="text-h4 mb-1">
-            Bienvenido al Help Desk <span class="text-capitalize">{{ themeConfig.app.title }}!</span> 👋🏻
+            Bienvenido Al Tablero De Mando <span class="text-capitalize">{{ themeConfig.app.title }}!</span> 👋🏻
           </h4>
         </VCardText>
         <VCardText>
