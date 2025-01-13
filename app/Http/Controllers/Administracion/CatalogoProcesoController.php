@@ -37,6 +37,7 @@ class CatalogoProcesoController extends Controller
         $request->validate([
             'nombre' => 'required|string',
             'descripcion' => 'string',
+            'activo' => 'boolean|required',
             'id' => 'required|integer'
         ]);
 
@@ -48,6 +49,7 @@ class CatalogoProcesoController extends Controller
            DB::beginTransaction();
            $catalogoProceso->nombre = $request->nombre;
            $catalogoProceso->descripcion = $request->descripcion;
+           $catalogoProceso->activo = $request->activo;
            $catalogoProceso->save();
            DB::commit();
            return $catalogoProceso;
@@ -61,10 +63,18 @@ class CatalogoProcesoController extends Controller
         $request->validate([
             'id' => 'required|integer'
         ]);
-
-//        try{
-//            DB::beginTransaction();
-////            $catalogoProceso = CatalogoP
-//        }
+        try{
+            DB::beginTransaction();
+            $catalogoProceso = CatalogoProceso::find($request->id);
+            if(!$catalogoProceso){
+                throw new \Exception('No existe el catalogo de proceso');
+            }
+            $catalogoProceso->delete();
+            DB::commit();
+            return $catalogoProceso;
+        } catch(\Exception $e){
+            DB::rollBack();
+            return response()->json(['error' => $e->getMessage()], 500);
+        }
     }
 }

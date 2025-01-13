@@ -34,5 +34,23 @@ Route::group(['middleware' => 'auth:sanctum'], function() {
     Route::post('catalogoPlantas/crearCatalogoPlanta',[\App\Http\Controllers\Administracion\CatalogoPlantaController::class,'crearCatalogoPlanta']);
     Route::post('catalogoPlantas/editarCatalogoPlanta',[\App\Http\Controllers\Administracion\CatalogoPlantaController::class,'editarCatalogoPlanta']);
 
+    //Catalogo Procesos
+    Route::post('catalogoProceso/obtenerCatalogoProcesos', [\App\Http\Controllers\Administracion\CatalogoProcesoController::class, 'obtenerCatalogoProcesos']);
+    Route::post('catalogoProceso/crearCatalogoProceso', [\App\Http\Controllers\Administracion\CatalogoProcesoController::class, 'crearCatalogoProceso']);
+    Route::post('catalogoProceso/editarCatalogoProceso', [\App\Http\Controllers\Administracion\CatalogoProcesoController::class, 'editarCatalogoProceso']);
+    Route::post('catalogoProceso/eliminarCatalogoProceso', [\App\Http\Controllers\Administracion\CatalogoProcesoController::class, 'eliminarCatalogoProceso']);
+
+    //Catalogo Tendencias
+    Route::post('catalogoTendencia/obtenerCatalogoTendencias', [\App\Http\Controllers\Administracion\CatalogoTendenciaController::class, 'obtenerCatalogoTendencias']);
+    Route::post('catalogoTendencia/crearCatalogoTendencia',[\App\Http\Controllers\Administracion\CatalogoTendenciaController::class, 'crearCatalogoTendencia']);
+    Route::post('catalogoTendencia/editarCatalogoTendencia', [\App\Http\Controllers\Administracion\CatalogoTendenciaController::class, 'editarCatalogoTendencia']);
+    Route::post('catalogoTendencia/eliminarCatalogoTendencia', [\App\Http\Controllers\Administracion\CatalogoTendenciaController::class, 'eliminarCatalogoTendencia']);
+
+    //Indicadores
+    Route::post('indicadores/obtenerDatos', [\App\Http\Controllers\Administracion\IndicadorController::class, 'obtenerDatos']);
+    Route::post('indicadores/obtenerIndicadores', [\App\Http\Controllers\Administracion\IndicadorController::class, 'obtenerIndicadores']);
+    Route::post('indicadores/crearIndicador', [\App\Http\Controllers\Administracion\IndicadorController::class, 'crearIndicador']);
+    Route::post('indicadores/editarIndicador', [\App\Http\Controllers\Administracion\IndicadorController::class, 'editarIndicador']);
+    Route::post('indicadores/eliminarIndicador', [\App\Http\Controllers\Administracion\IndicadorController::class, 'eliminarIndicador']);
 
 });

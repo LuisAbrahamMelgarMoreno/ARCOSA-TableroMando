@@ -11,5 +11,6 @@ class CatalogoProceso extends Model
     protected $fillable = [
         'nombre',
         'descripcion',
+        'activo'
     ];
 }

@@ -48,6 +48,7 @@ const obtencionDatos = async () => {
     try {
       const response = await props.getData();
       dataOpciones.value = response.data;
+      console.log( 'demodemode' ,dataOpciones.value)
     } catch (error) {
       console.log(error)
     }

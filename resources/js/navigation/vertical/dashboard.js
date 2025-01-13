@@ -39,6 +39,24 @@ export default [
         action: 'leer',
         subject: 'Catalogo Planta',
       },
+      {
+        title: 'Catálogo Proceso',
+        to: 'administracion-catalogoprocesos',
+        action: 'leer',
+        subject: 'Catalogo Proceso',
+      },
+      {
+        title: 'Catálogo Tendencia',
+        to: 'administracion-catalogotendencias',
+        action: 'leer',
+        subject: 'Catalogo Proceso',
+      },
+      {
+        title: 'Indicadores',
+        to: 'administracion-indicadores',
+        action: 'leer',
+        subject: 'Indicador',
+      },
     ],
   },
 ]

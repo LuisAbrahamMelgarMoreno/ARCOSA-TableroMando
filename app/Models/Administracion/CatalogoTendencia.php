@@ -12,5 +12,6 @@ class CatalogoTendencia extends Model
     protected $fillable = [
         'nombre',
         'descripcion',
+        'activo'
     ];
 }
